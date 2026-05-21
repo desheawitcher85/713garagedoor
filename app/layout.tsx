@@ -8,6 +8,7 @@ import "./globals.css"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { StickyCallButton } from "@/components/layout/StickyCallButton"
+import { GoogleAnalytics } from "@next/third-parties/google"
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema"
 import { siteConfig } from "@/lib/site-config"
 
@@ -83,6 +84,7 @@ export default function RootLayout({
         <Footer />
         <StickyCallButton />
       </body>
+      <GoogleAnalytics gaId="G-ZYPPJCDCBZ" />
     </html>
   )
 }
