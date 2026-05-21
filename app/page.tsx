@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import Link from "next/link"
 import Image from "next/image"
 import { Phone, Droplets, Wind } from "lucide-react"
@@ -10,7 +11,8 @@ import { ServiceAreaMap } from "@/components/blocks/ServiceAreaMap"
 import { ReviewCarousel } from "@/components/blocks/ReviewCarousel"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
 import { CTABanner } from "@/components/blocks/CTABanner"
-import { QuoteForm } from "@/components/blocks/QuoteForm"
+
+const QuoteForm = dynamic(() => import("@/components/blocks/QuoteForm").then(m => m.QuoteForm))
 import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema"
 import { FAQPageSchema } from "@/components/schema/FAQPageSchema"
 import { siteConfig } from "@/lib/site-config"

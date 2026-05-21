@@ -26,10 +26,11 @@ export function HeroBlock({
             src="/images/dusk-shot-of-the-houston-texas-skyline-34d9a2-1024.jpg"
             alt=""
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             sizes="100vw"
             className="object-cover object-center"
-            quality={80}
+            quality={65}
           />
           {/* Dark overlay for text contrast */}
           <div className="absolute inset-0 bg-ink/80" aria-hidden="true" />
