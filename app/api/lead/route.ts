@@ -75,7 +75,7 @@ Source page: ${referer}`
     try {
       const resend = new Resend(apiKey)
       await resend.emails.send({
-        from: `leads@${siteConfig.domain}`,
+        from: `contact@${siteConfig.domain}`,
         to: siteConfig.email,
         subject: `New Houston Garage Door Lead -- ${data.service} -- ${data.urgency}`,
         text: emailBody,
