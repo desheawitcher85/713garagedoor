@@ -130,7 +130,6 @@ export default function TheHeightsPage() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-mist mt-2">[JOB PLACEHOLDER: DeShea to add real job photos]</p>
           </div>
 
           <h2 className="font-heading text-3xl text-ink mt-10 mb-3">Adjacent Neighborhoods We Also Serve</h2>
