@@ -6,7 +6,7 @@ export const siteConfig = {
   phone: "(713) 535-9301",
   phoneE164: "+17135359301",
   phoneDisplay: "713-535-9301",
-  email: "leads@713garagedoor.com",
+  email: "deshea.witcher85@gmail.com",
   address: {
     city: "Houston",
     state: "TX",

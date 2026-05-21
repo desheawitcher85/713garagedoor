@@ -89,22 +89,22 @@ export default function HomePage() {
                 area: "The Heights",
                 type: "Spring Replacement",
                 desc: "Dual torsion spring replacement on a 1940s bungalow with a narrow single-car garage.",
-                img: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&h=320&fit=crop&q=80",
-                alt: "Craftsman-style home with attached garage in Houston Heights",
+                img: "https://images.unsplash.com/photo-1576765915042-d4746f8b7727?w=600&h=320&fit=crop&q=80",
+                alt: "Residential garage door on a Houston Heights home",
               },
               {
                 area: "Memorial",
                 type: "Opener Upgrade",
                 desc: "LiftMaster myQ smart opener installed on a 3-car garage. Remote access from the homeowner's phone.",
-                img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=320&fit=crop&q=80",
-                alt: "Modern Houston home with three-car garage",
+                img: "https://images.unsplash.com/photo-1682207068315-c28cf5108964?w=600&h=320&fit=crop&q=80",
+                alt: "Two white residential garage doors",
               },
               {
                 area: "Sugar Land",
                 type: "Full Door Replacement",
                 desc: "Builder-grade door replaced with insulated steel. HOA-compliant carriage style.",
-                img: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&h=320&fit=crop&q=80",
-                alt: "Suburban Houston home with new carriage-style garage door",
+                img: "https://images.unsplash.com/photo-1675747158954-4a32e28812c0?w=600&h=320&fit=crop&q=80",
+                alt: "White residential garage door on brick home",
               },
             ].map((job) => (
               <div key={job.area} className="bg-paper border border-cream rounded-lg overflow-hidden">
