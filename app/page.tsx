@@ -11,6 +11,8 @@ import { ReviewCarousel } from "@/components/blocks/ReviewCarousel"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
 import { CTABanner } from "@/components/blocks/CTABanner"
 import { QuoteForm } from "@/components/blocks/QuoteForm"
+import { LocalBusinessSchema } from "@/components/schema/LocalBusinessSchema"
+import { FAQPageSchema } from "@/components/schema/FAQPageSchema"
 import { siteConfig } from "@/lib/site-config"
 import { generalFaqs, houstonFaqs } from "@/lib/faqs"
 
@@ -26,6 +28,8 @@ const homeFaqs = [...generalFaqs.slice(0, 5), ...houstonFaqs.slice(0, 3)]
 export default function HomePage() {
   return (
     <>
+      <LocalBusinessSchema />
+      <FAQPageSchema faqs={homeFaqs} />
       <HeroBlock
         h1="Houston Garage Door Repair, Installation & Service"
         subhead="Same-day service across Greater Houston. Broken springs, stuck doors, opener failures, new installs. Available 24/7 with no after-hours surcharge."

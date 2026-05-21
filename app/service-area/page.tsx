@@ -4,6 +4,7 @@ import { MapPin } from "lucide-react"
 import { FAQBlock } from "@/components/blocks/FAQBlock"
 import { CTABanner } from "@/components/blocks/CTABanner"
 import { BreadcrumbSchema, buildBreadcrumbItems } from "@/components/schema/BreadcrumbSchema"
+import { FAQPageSchema } from "@/components/schema/FAQPageSchema"
 import { siteConfig } from "@/lib/site-config"
 import { neighborhoods, adjacentAreas } from "@/lib/neighborhoods"
 import { houstonFaqs, generalFaqs } from "@/lib/faqs"
@@ -25,6 +26,7 @@ export default function ServiceAreaPage() {
   return (
     <>
       <BreadcrumbSchema crumbs={crumbs} />
+      <FAQPageSchema faqs={areaFaqs} />
 
       <section className="bg-ink text-white section-pad">
         <div className="container-site">

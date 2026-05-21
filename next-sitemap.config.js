@@ -5,6 +5,7 @@ module.exports = {
   sitemapSize: 7000,
   changefreq: 'weekly',
   priority: 0.7,
+  exclude: ['/opengraph-image'],
   transform: async (config, path) => {
     let priority = 0.7
 
