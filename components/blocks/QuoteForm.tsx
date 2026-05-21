@@ -1,10 +1,11 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import { Phone, CheckCircle } from "lucide-react"
+import { Phone } from "lucide-react"
 import { siteConfig } from "@/lib/site-config"
 
 const formSchema = z.object({
@@ -32,7 +33,7 @@ interface QuoteFormProps {
 }
 
 export function QuoteForm({ id = "quote-form" }: QuoteFormProps) {
-  const [submitted, setSubmitted] = useState(false)
+  const router = useRouter()
   const [submitting, setSubmitting] = useState(false)
 
   const {
@@ -52,28 +53,13 @@ export function QuoteForm({ id = "quote-form" }: QuoteFormProps) {
         body: JSON.stringify(data),
       })
       if (res.ok) {
-        setSubmitted(true)
+        router.push("/thank-you")
       }
     } catch {
       // silently handle -- form still shows
     } finally {
       setSubmitting(false)
     }
-  }
-
-  if (submitted) {
-    return (
-      <div id={id} className="bg-white rounded-lg p-8 text-center border border-cream shadow-sm">
-        <CheckCircle className="w-12 h-12 text-success mx-auto mb-4" />
-        <h3 className="font-heading text-2xl text-ink mb-2">Quote Request Received</h3>
-        <p className="text-steel mb-6">
-          We'll call you back within 30 minutes during business hours. For immediate service, call us directly.
-        </p>
-        <a href={`tel:${siteConfig.phoneE164}`} className="btn-primary mx-auto">
-          <Phone className="w-4 h-4" /> Call {siteConfig.phone}
-        </a>
-      </div>
-    )
   }
 
   return (
